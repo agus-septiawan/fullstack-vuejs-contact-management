@@ -9,6 +9,7 @@
     "start": "serve -s dist -l $PORT"
   },
   "dependencies": {
+    "serve": "^14.2.3",
     "@vueuse/core": "^13.4.0",
     "pinia": "^3.0.3",
     "sweetalert2": "^11.22.1",
