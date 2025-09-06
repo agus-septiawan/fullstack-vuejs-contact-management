@@ -17,14 +17,19 @@ import AddressEdit from "./components/Address/AddressEdit.vue";
 const router = createRouter({
   routes: [
     {
+      path: "/", // Tambahkan default route
+      redirect: "/login"
+    },
+    {
+      path: "/",
       component: Layout,
       children: [
         {
-          path: "/register",
+          path: "register",
           component: UserRegister,
         },
         {
-          path: "/login",
+          path: "login",
           component: UserLogin,
         },
       ],
@@ -71,6 +76,10 @@ const router = createRouter({
         },
       ],
     },
+    {
+      path: "/:pathMatch(.*)*", // 404 fallback
+      redirect: "/login"
+    }
   ],
   history: createWebHistory(),
 });
